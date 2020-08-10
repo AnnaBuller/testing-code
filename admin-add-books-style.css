@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0 auto;
+	width: 700px;
+	font-family: sans-serif;
+}
+
+.new-book {
+	margin: 50px auto;
+	width: 100%;
+}
+
+/* .new-book__cover {
+	display: inline-block;
+	vertical-align: top;
+	width: 35%;
+} */
+
+.form {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	/* outline: 2px solid red; */
+}
+
+.form::before {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 450px;
+	background: red;
+	left: 210px;
+}
+
+.form__container {
+	display: flex;
+	justify-content: flex-end;
+	outline: 2px solid green;
+}
+
+.form__group {
+	/* align-items: center; */
+	/* display: flex; */
+	/* margin: 5px; */
+	/* outline: 5px dotted purple; */
+	background: #f2f2f2;
+	font-size: 1.1rem;
+	justify-content: space-between;
+	padding: 10px;
+	text-align: right;
+	width: 100%;
+}
+
+/* .form__label {
+	display: inline-block;
+} */
+
+.form__input {
+	display: inline-block;
+	font-size: 1rem;
+	margin-left: 20px;
+	padding: 6px;
+}
+
+form .form__group--half-width {
+	width: 50%;
+}
+form .form__group--quarter-width {
+	width: 50%;
+}
+
+form .form__input--full-width {
+	width: 70%;
+}
+form .form__input--half-width {
+	width: 50%;
+}
+form .form__input--quarter-width {
+	width: 30%;
+}
+
+.btn {
+	margin-top: 30px;
+	display: block;
+	font-size: 18px;
+	padding: 5px 15px;
+}
