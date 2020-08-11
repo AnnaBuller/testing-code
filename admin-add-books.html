@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./admin-add-books-style.css" />
-		<title>Nowa Pozycja | Panel Administratora</title>
-	</head>
-	<body>
-		<section class="new-book">
-			<!-- <figure class="new-book__cover">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./style.css" />
+	<title>Nowa Pozycja | Panel Administratora</title>
+</head>
+
+<body>
+	<section class="new-book">
+		<!-- <figure class="new-book__cover">
 				<img
 					style="width: 150px;"
 					src="https://source.unsplash.com/random"
@@ -20,145 +22,84 @@
 				</button>
 			</figure> -->
 
-			<form action="#" method="get" class="form">
-				<div class="form__group form__group--full-width">
-					<label class="form__label" for="docType">Typ dokumetu</label>
-					<input
-						id="docType"
-						list="doc-types"
-						type="text"
-						name="docType"
-						class="form__input form__input--full-width"
-					/>
-					<datalist class="form__datalist" id="doc-types">
-						<option>książka</option>
-						<option>czasopismo</option>
-						<option>dokument</option>
-						<option>nośnik danych</option>
-					</datalist>
+		<form action="#" method="get" class="new-book_form form">
+			<div class="form__group">
+				<label class="form__label" for="docType">Typ dokumetu</label>
+				<select class="form__select form__input form__input--full-width" id="docType" name="docType">
+					<option>książka</option>
+					<option>czasopismo</option>
+					<option>dokument</option>
+					<option>nośnik danych</option>
+				</select>
+			</div>
+
+			<div class="form__group">
+				<label class="form__label" for="title">Tytuł</label>
+				<input id="title" type="text" name="title" class="form__input form__input--full-width" required />
+			</div>
+
+			<div class="form__group">
+				<label class="form__label" for="author">Autor</label>
+				<input id="author" type="text" name="author" class="form__input form__input--full-width" required />
+			</div>
+
+			<div class="form__group">
+				<label class="form__label" for="publisher">Wydawnictwo</label>
+				<input id="publisher" type="text" name="publisher" class="form__input form__input--full-width" />
+			</div>
+
+			<div class="form__group">
+				<label class="form__label" for="genre">Gatunek</label>
+				<select class="form__select form__input form__input--full-width" id="genre" name="genre">
+					<option>fantasy</option>
+					<option>si-fi</option>
+					<option>thriller</option>
+					<option>biografia</option>
+					<option>romans</option>
+				</select>
+			</div>
+
+			<div class="form__container">
+				<div class="form__group">
+					<label class="form__label" for="pubDate">Data wydania</label>
+					<input id="pubDate" type="number" value="2000" name="pubDate" class="form__input form__input--half-width" />
 				</div>
 
 				<div class="form__group">
-					<label class="form__label" for="title">Tytuł</label>
-					<input
-						id="title"
-						type="text"
-						name="title"
-						class="form__input form__input--full-width"
-						required
-					/>
+					<label class="form__label" for="numberPage">Il. stron</label>
+					<input id="numberPage" type="number" name="numberPage" class="form__input form__input--quarter-width" />
+				</div>
+			</div>
+
+			<div class="form__container">
+				<div class="form__group">
+					<label class="form__label" for="bookNum">ISBN</label>
+					<input id="bookNum" type="text" name="bookNum" class="form__input form__input--half-width" />
 				</div>
 
 				<div class="form__group">
-					<label class="form__label" for="author">Autor</label>
-					<input
-						id="author"
-						type="text"
-						name="author"
-						class="form__input form__input--full-width"
-						required
-					/>
+					<label class="form__label" for="copies">Il. egzemplarzy</label>
+					<input id="copies" type="text" name="copies" class="form__input form__input--quarter-width" />
+				</div>
+			</div>
+
+			<div class="form__container">
+				<div class="form__group">
+					<label class="form__label" for="readRoom">W czytelni</label>
+					<input id="readRoom" type="text" name="readRoom" class="form__input form__input--quarter-width" />
 				</div>
 
 				<div class="form__group">
-					<label class="form__label" for="publisher">Wydawnictwo</label>
-					<input
-						id="publisher"
-						type="text"
-						name="publisher"
-						class="form__input form__input--full-width"
-					/>
+					<label class="form__label" for="toLent">Do wypożyczenia</label>
+					<input id="toLent" type="text" name="toLent" class="form__input form__input--quarter-width" />
 				</div>
+			</div>
 
-				<div class="form__group form__group--full-width">
-					<label class="form__label" for="genre">Gatunek</label>
-					<input
-						id="genre"
-						list="genre-types"
-						type="text"
-						name="genre"
-						class="form__input form__input--full-width"
-					/>
-					<datalist class="form__datalist" id="genre-types">
-						<option>fantasy</option>
-						<option>si-fi</option>
-						<option>thriller</option>
-						<option>biografia</option>
-						<option>romans</option>
-					</datalist>
-				</div>
+			<button type="submit" class="form__submit btn btn--main">
+				Dodaj pozycję
+			</button>
+		</form>
+	</section>
+</body>
 
-				<div class="form__container">
-					<div class="form__group form__group--half-width">
-						<label class="form__label" for="pubDate">Data wydania </label>
-						<input
-							id="pubDate"
-							type="number"
-							value="2000"
-							name="pubDate"
-							class="form__input form__input--half-width"
-						/>
-					</div>
-
-					<div class="form__group form__group--quarter-width">
-						<label class="form__label" for="numberPage">Il. stron </label>
-						<input
-							id="numberPage"
-							type="number"
-							name="numberPage"
-							class="form__input form__input--quarter-width"
-						/>
-					</div>
-				</div>
-
-				<div class="form__container">
-					<div class="form__group form__group--half-width">
-						<label class="form__label" for="bookNum">ISBN </label>
-						<input
-							id="bookNum"
-							type="text"
-							name="bookNum"
-							class="form__input form__input--half-width"
-						/>
-					</div>
-
-					<div class="form__group form__group--quarter-width">
-						<label class="form__label" for="copies">Il. egzemplarzy </label>
-						<input
-							id="copies"
-							type="text"
-							name="copies"
-							class="form__input form__input--quarter-width"
-						/>
-					</div>
-				</div>
-
-				<div class="form__container">
-					<div class="form__group form__group--quarter-width">
-						<label class="form__label" for="readRoom">W czytelni </label>
-						<input
-							id="readRoom"
-							type="text"
-							name="readRoom"
-							class="form__input form__input--quarter-width"
-						/>
-					</div>
-
-					<div class="form__group form__group--quarter-width">
-						<label class="form__label" for="toLent">Do wypożyczenia </label>
-						<input
-							id="toLent"
-							type="text"
-							name="toLent"
-							class="form__input form__input--quarter-width"
-						/>
-					</div>
-				</div>
-
-				<button type="submit" class="form__submit btn btn--main">
-					Dodaj pozycję
-				</button>
-			</form>
-		</section>
-	</body>
 </html>

@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0 auto;
+	width: 700px;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  outline: 2px green solid;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+/* ----------------------STYLE DLA ELEMENTÓW FORMULARZA--------------------------- */
+.form__group {
+  outline: 1px solid red;
+  margin-bottom: 20px;
+}
+
+.form__group .form__label {
+  display: inline-block;
+  width: 150px;
+}
+
+.form__group .form__input {
+  display: inline-block;
+	font-size: 1rem;
+	padding: 6px;
+}
+
+/* ----------------------STYLE DLA INPUTÓW - KONKRETNE SZEROKOŚCI---------------------- */
+.form__group .form__input--full-width {
+  width: 500px;
+}
+.form__group .form__input--half-width {
+  width: 200px;
+}
+.form__group .form__input--quarter-width {
+  width: 100px;
+}
+
+
+/* ----------------------STYLE DLA UKŁADU DWUKOLUMNOWEGO---------------------- */
+.form__container {
+  outline: 3px solid blue;
+}
+
+.form__container .form__group {
+  display: inline-block;
+}
+
+.form__container > .form__group:last-child {
+  margin-left: 40px;
+}
+
+/* Nie rozumiem dlaczego nie działa ":last-child" dla container */
+.form__container:last-of-type > .form__group:last-child {
+  margin-left: 140px;
+}
+
+/* ----------------------STYLE DLA PRZYCISKU---------------------- */
+.btn {
+	margin-top: 30px;
+	display: block;
+	font-size: 18px;
+	padding: 5px 15px;
+}
